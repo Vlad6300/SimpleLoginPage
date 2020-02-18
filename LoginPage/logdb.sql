@@ -1,0 +1,18 @@
+DROP DATABASE IF EXISTS user_pass;
+CREATE DATABASE user_pass;
+USE user_pass;
+
+CREATE TABLE Login(
+username VARCHAR(20),
+salt VARCHAR(40),
+hash VARCHAR(100),
+
+PRIMARY KEY(username)
+);
+
+INSERT INTO Login VALUES(
+	"admin",
+	"5f2771021a614a4db00979565b577808",
+	"21a102e1e63196fb8b3fecfb3bc16009f165e1e751b1d765d2d608e630e90e14"
+
+);
